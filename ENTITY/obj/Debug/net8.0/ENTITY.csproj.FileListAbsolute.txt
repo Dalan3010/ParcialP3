@@ -1,0 +1,11 @@
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/ENTITY.GeneratedMSBuildEditorConfig.editorconfig
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/ENTITY.AssemblyInfoInputs.cache
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/ENTITY.AssemblyInfo.cs
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/ENTITY.csproj.CoreCompileInputs.cache
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/bin/Debug/net8.0/ENTITY.deps.json
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/bin/Debug/net8.0/ENTITY.dll
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/bin/Debug/net8.0/ENTITY.pdb
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/ENTITY.dll
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/refint/ENTITY.dll
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/ENTITY.pdb
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/ENTITY/obj/Debug/net8.0/ref/ENTITY.dll

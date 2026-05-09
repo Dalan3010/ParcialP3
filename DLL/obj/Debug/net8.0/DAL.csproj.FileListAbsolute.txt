@@ -1,0 +1,15 @@
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/bin/Debug/net8.0/DAL.deps.json
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/bin/Debug/net8.0/DAL.dll
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/bin/Debug/net8.0/DAL.pdb
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/bin/Debug/net8.0/ENTITY.dll
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/bin/Debug/net8.0/ENTITY.pdb
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.csproj.AssemblyReference.cache
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.GeneratedMSBuildEditorConfig.editorconfig
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.AssemblyInfoInputs.cache
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.AssemblyInfo.cs
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.csproj.CoreCompileInputs.cache
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.csproj.Up2Date
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.dll
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/refint/DAL.dll
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/DAL.pdb
+/home/atziro/Documentos/Parcial_P3/ParcialP3/ParcialP3/DLL/obj/Debug/net8.0/ref/DAL.dll
