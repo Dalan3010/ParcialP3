@@ -351,7 +351,6 @@
             this.btnEliminarProductos.TabIndex = 17;
             this.btnEliminarProductos.Text = "ELIMINAR";
             this.btnEliminarProductos.UseVisualStyleBackColor = true;
-            this.btnEliminarProductos.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnEliminarCategoria
             // 

@@ -47,6 +47,12 @@ namespace GUI
             dgvProductosMovimientos.CellClick += (s, e) => SeleccionarProductoMovimiento();
         }
 
+        // Métodos explícitos para el Diseñador de Visual Studio
+        private void button3_Click(object sender, EventArgs e) { EliminarProducto(); }
+        private void button1_Click(object sender, EventArgs e) { RegistrarMovimiento("Entrada"); }
+        private void button2_Click(object sender, EventArgs e) { RegistrarMovimiento("Salida"); }
+        private void tabPage1_Click(object sender, EventArgs e) { }
+
         private void CargarDatosIniciales()
         {
             ActualizarGridProductos();
