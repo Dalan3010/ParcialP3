@@ -8,14 +8,25 @@ namespace DLL
 {
     public class ProveedorDAL
     {
-        private readonly string _path = "Proveedores.txt";
+        private string GetPath()
+        {
+            string root = AppDomain.CurrentDomain.BaseDirectory;
+            while (root != null && !File.Exists(Path.Combine(root, "ParcialP3.sln")))
+            {
+                root = Directory.GetParent(root)?.FullName;
+            }
+            
+            string baseDir = root ?? AppDomain.CurrentDomain.BaseDirectory;
+            return Path.Combine(baseDir, "Data", "Proveedores.txt");
+        }
 
         public List<Proveedor> GetAll()
         {
             try
             {
-                if (!File.Exists(_path)) return new List<Proveedor>();
-                return File.ReadAllLines(_path)
+                string path = GetPath();
+                if (!File.Exists(path)) return new List<Proveedor>();
+                return File.ReadAllLines(path)
                     .Where(line => !string.IsNullOrWhiteSpace(line))
                     .Select(line =>
                     {
@@ -40,8 +51,12 @@ namespace DLL
         {
             try
             {
+                string path = GetPath();
+                string dir = Path.GetDirectoryName(path);
+                if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+
                 var lines = proveedores.Select(p => $"{p.IdProveedor};{p.Nombre};{p.Contacto};{p.Telefono};{p.Email}");
-                File.WriteAllLines(_path, lines);
+                File.WriteAllLines(path, lines);
             }
             catch (Exception ex)
             {

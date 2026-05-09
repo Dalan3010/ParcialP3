@@ -8,14 +8,25 @@ namespace DLL
 {
     public class MovimientoDAL
     {
-        private readonly string _path = "Movimientos.txt";
+        private string GetPath()
+        {
+            string root = AppDomain.CurrentDomain.BaseDirectory;
+            while (root != null && !File.Exists(Path.Combine(root, "ParcialP3.sln")))
+            {
+                root = Directory.GetParent(root)?.FullName;
+            }
+            
+            string baseDir = root ?? AppDomain.CurrentDomain.BaseDirectory;
+            return Path.Combine(baseDir, "Data", "Movimientos.txt");
+        }
 
         public List<Movimiento> GetAll()
         {
             try
             {
-                if (!File.Exists(_path)) return new List<Movimiento>();
-                return File.ReadAllLines(_path)
+                string path = GetPath();
+                if (!File.Exists(path)) return new List<Movimiento>();
+                return File.ReadAllLines(path)
                     .Where(line => !string.IsNullOrWhiteSpace(line))
                     .Select(line =>
                     {
@@ -41,8 +52,12 @@ namespace DLL
         {
             try
             {
+                string path = GetPath();
+                string dir = Path.GetDirectoryName(path);
+                if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+
                 string line = $"{m.IdMovimiento};{m.IdProducto};{m.Tipo};{m.Cantidad};{m.Fecha};{m.Descripcion}";
-                File.AppendAllText(_path, line + Environment.NewLine);
+                File.AppendAllText(path, line + Environment.NewLine);
             }
             catch (Exception ex)
             {

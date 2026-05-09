@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{3520E896-AEB3-43D2-96BF-F9E47FA25677}</Project>
+      <Project>{22fe64c7-eb8a-4697-ae01-5d4d2c281a47}</Project>
       <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\ENTITY\ENTITY.csproj">

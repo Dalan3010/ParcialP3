@@ -8,14 +8,25 @@ namespace DLL
 {
     public class CategoriaDAL
     {
-        private readonly string _path = "Categorias.txt";
+        private string GetPath()
+        {
+            string root = AppDomain.CurrentDomain.BaseDirectory;
+            while (root != null && !File.Exists(Path.Combine(root, "ParcialP3.sln")))
+            {
+                root = Directory.GetParent(root)?.FullName;
+            }
+            
+            string baseDir = root ?? AppDomain.CurrentDomain.BaseDirectory;
+            return Path.Combine(baseDir, "Data", "Categorias.txt");
+        }
 
         public List<Categoria> GetAll()
         {
             try
             {
-                if (!File.Exists(_path)) return new List<Categoria>();
-                return File.ReadAllLines(_path)
+                string path = GetPath();
+                if (!File.Exists(path)) return new List<Categoria>();
+                return File.ReadAllLines(path)
                     .Where(line => !string.IsNullOrWhiteSpace(line))
                     .Select(line =>
                     {
@@ -38,8 +49,12 @@ namespace DLL
         {
             try
             {
+                string path = GetPath();
+                string dir = Path.GetDirectoryName(path);
+                if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+
                 var lines = categorias.Select(c => $"{c.IdCategoria};{c.NombreCategoria};{c.Descripcion}");
-                File.WriteAllLines(_path, lines);
+                File.WriteAllLines(path, lines);
             }
             catch (Exception ex)
             {

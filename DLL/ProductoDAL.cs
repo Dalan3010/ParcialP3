@@ -8,14 +8,25 @@ namespace DLL
 {
     public class ProductoDAL
     {
-        private readonly string _path = "Productos.txt";
+        private string GetPath()
+        {
+            string root = AppDomain.CurrentDomain.BaseDirectory;
+            while (root != null && !File.Exists(Path.Combine(root, "ParcialP3.sln")))
+            {
+                root = Directory.GetParent(root)?.FullName;
+            }
+            
+            string baseDir = root ?? AppDomain.CurrentDomain.BaseDirectory;
+            return Path.Combine(baseDir, "Data", "Productos.txt");
+        }
 
         public List<Producto> GetAll()
         {
             try
             {
-                if (!File.Exists(_path)) return new List<Producto>();
-                return File.ReadAllLines(_path)
+                string path = GetPath();
+                if (!File.Exists(path)) return new List<Producto>();
+                return File.ReadAllLines(path)
                     .Where(line => !string.IsNullOrWhiteSpace(line))
                     .Select(line =>
                     {
@@ -43,8 +54,12 @@ namespace DLL
         {
             try
             {
+                string path = GetPath();
+                string dir = Path.GetDirectoryName(path);
+                if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+
                 var lines = productos.Select(p => $"{p.IdProducto};{p.Nombre};{p.Descripcion};{p.Precio};{p.Stock};{p.IdCategoria};{p.IdProveedor};{p.StockMinimo}");
-                File.WriteAllLines(_path, lines);
+                File.WriteAllLines(path, lines);
             }
             catch (Exception ex)
             {
